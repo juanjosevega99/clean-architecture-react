@@ -1,6 +1,6 @@
 import { RickAndMortyAdapter } from '../adapter';
 
-export const rickAndMorty = 'https://rickandmortyapi.com/api/character/2';
+export const rickAndMortyUrl = 'https://rickandmortyapi.com/api/character/2';
 
 export const fetchMorty = async (url: string) => {
   return fetch(url)
