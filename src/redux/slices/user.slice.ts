@@ -7,10 +7,17 @@ export const userSlice = createSlice({
   reducers: {
     createUser: (state, action) => {
       return action.payload;
+    },
+    modifyUser: (state, action) => {
+      const formattedData = { ...state, ...action.payload };
+      return formattedData;
+    },
+    resetUser: () => {
+      return UserEmptyState;
     }
   }
 });
 
-export const { createUser } = userSlice.actions;
+export const { createUser, modifyUser, resetUser } = userSlice.actions;
 
 export default userSlice.reducer;
